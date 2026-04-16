@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 const Skills = () => {
   const categories = [
     {
-      name: "Core Engineering",
-      skills: ["Python", "C++", "MATLAB", "Embedded Systems", "Arduino", "PCB Design"]
-    },
-    {
-      name: "Software & Web",
-      skills: ["React", "JavaScript", "TypeScript", "Node.js", "Git", "FastAPI"]
+      name: "Programming & Development",
+      skills: ["Python", "Java", "JavaScript", "React", "Node.js", "Bootstrap"]
     },
     {
       name: "Machine Learning & AI",
-      skills: ["TensorFlow", "PyTorch", "Data Modeling", "Computer Vision", "Scikit-Learn"]
+      skills: ["TensorFlow", "Scikit-learn", "XGBoost", "Deep Learning Frameworks", "Gen-AI"]
+    },
+    {
+      name: "Tools & Technologies",
+      skills: ["LangChain", "RAG", "IBM Watsonx", "AWS (SageMaker, Lambda, IoT Core)"]
     }
   ];
 

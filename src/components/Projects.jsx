@@ -7,45 +7,45 @@ const Projects = () => {
   const projects = [
     { 
       id: 1, 
-      title: "PEDOT:PSS Hydrogel Triboelectric Generator", 
-      desc: "Developed a wearable nanoenergy harvesting system using PEDOT:PSS hydrogel for motion sensing and secure signal generation. Integrated machine learning models for gesture classification and output optimization, supported by custom 3D-printed mold design. Impact: Demonstrates scalable self-powered sensing with intelligent signal interpretation; co-authored international conference publication.", 
-      tech: ["Python", "ML Regression", "Nanosensors", "Embedded Systems"], 
-      img: "https://images.unsplash.com/photo-1558494949-ef010911182e?auto=format&fit=crop&q=80&w=400" 
-    },
-    { 
-      id: 2, 
-      title: "Hyperspectral Image Super-Resolution", 
-      desc: "Designed a transformer-based architecture for hyperspectral image reconstruction by adapting EdgeTAM with a spectral–spatial perceiver and modified decoder. Evaluated on Chikusei and Pavia datasets using PSNR, SSIM, and SAM metrics. Results: PSNR: 39.1 dB | SAM: 0.028", 
-      tech: ["PyTorch", "Transformers", "Remote Sensing", "Deep Learning"], 
+      title: "Perceiver based model for hyperspectral image Super-Resolution", 
+      desc: "First to use Perceiver model for this purpose and modified its decoder for hyperspectral image reconstruction, validated on Chikusei & Pavia datasets using PSNR, SSIM, and SAM metrics. (PSNR-39.1 db, SAM-0.028).", 
+      tech: ["Deep Learning", "Hyperspectral Imaging", "Perceiver"], 
       img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400" 
     },
     { 
+      id: 2, 
+      title: "RAG-based Financial Document Intelligence", 
+      desc: "Built a RAG-based audit intelligence system over SEC 10-K filings using LangChain, FAISS, and Gemini 2.5 Flash; automated red flag detection across 20+ audit terms and LLM-driven cross-statement consistency checking, evaluated with Ragas across 3 annual reports (Apple, Microsoft, Tesla) — 82% faithfulness, 79% context recall, 2.4s avg query on documents up to 214 pages.", 
+      tech: ["LangChain", "FAISS", "Gemini 2.5 Flash", "Python"], 
+      img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=400" 
+    },
+    { 
       id: 3, 
-      title: "Serverless Federated Learning", 
-      desc: "Architected a privacy-preserving federated learning pipeline on AWS using IoT Core, Lambda, and SageMaker. Implemented an LSTM autoencoder for anomaly detection across 22,000+ streaming data points, with differential privacy integration. Results: Achieved 92.5% of centralized F1-score performance.", 
-      tech: ["Python", "TensorFlow", "AWS", "Federated Learning"], 
-      img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400" 
+      title: "Serverless Federated Learning for Real-Time IoT Anomaly Detection", 
+      desc: "Architected serverless FL pipeline on AWS (IoT Core, Lambda, SageMaker) achieving 92.5% of centralized F1-score (0.4993) with full data privacy across 22,695 streaming messages. Quantified privacy-performance trade off via DP-FL experiments.", 
+      tech: ["Python", "TensorFlow", "AWS SageMaker", "LSTM Autoencoder"], 
+      img: "https://images.unsplash.com/photo-1558494949-ef010911182e?auto=format&fit=crop&q=80&w=400" 
     },
     { 
       id: 4, 
-      title: "RAG-based Financial Document Intelligence", 
-      desc: "Built a retrieval-augmented generation system for automated audit intelligence over SEC 10-K filings. Enabled red-flag detection and cross-statement validation using LLMs and vector search. Results: 82% faithfulness | 79% context recall | 2.4s query latency on 200+ page documents.", 
-      tech: ["LangChain", "FAISS", "Gemini", "NLP"], 
-      img: "https://images.unsplash.com/photo-1611974714131-01e47953285e?auto=format&fit=crop&q=80&w=400" 
+      title: "ML-Powered Environmental Sensing Device for Bronchitis Risk", 
+      desc: "Built end-to-end ML pipeline with Random Forest classifier (43.75% accuracy, F1: 45.63%) linking 4 patient features to bronchitis medication recommendations; resolved class imbalance gaps against environmental health standards.", 
+      tech: ["Python", "Scikit-Learn", "IoT Sensors"], 
+      img: "https://images.unsplash.com/photo-1576086213369-971348835ad2?auto=format&fit=crop&q=80&w=400" 
     },
     { 
       id: 5, 
-      title: "Hydrogel Surface Degradation Dataset", 
-      desc: "Developed an image-based dataset to analyze microstructural degradation in hydrogel-based triboelectric systems, enabling performance tracking and durability optimization. Impact: Bridges materials science with data-driven evaluation for next-gen nanoenergy devices.", 
-      tech: ["Computer Vision", "Dataset Engineering", "Materials Science"], 
-      img: "https://images.unsplash.com/photo-1532187863486-abf9d3a44618?auto=format&fit=crop&q=80&w=400" 
+      title: "PEDOT:PSS Hydrogel Triboelectric Generator with ML Integration", 
+      desc: "Renewable nanoenergy harvesting device with ML-driven performance optimization; integrated ML regression models for output optimization, co-authored publication at international nanotechnology conference.", 
+      tech: ["Python", "ML Regression", "PEDOT:PSS", "Nanosensors"], 
+      img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400" 
     },
     { 
       id: 6, 
-      title: "Biomedical ML Systems", 
-      desc: "Designed multiple intelligent healthcare systems: a bronchitis risk prediction device, personalized pulmonary medication recommender, and an AI-based posture correction system. Impact: Demonstrates applied ML in real-world biomedical diagnostics and assistive systems.", 
-      tech: ["Python", "Scikit-learn", "IoT Sensors", "Embedded Systems"], 
-      img: "https://images.unsplash.com/photo-1576086213369-971348835ad2?auto=format&fit=crop&q=80&w=400" 
+      title: "Hydrogel Surface Degradation Dataset", 
+      desc: "Developed image-based dataset to analyze hydrogel microstructure degradation in triboelectric applications, supporting performance evaluation and durability optimization.", 
+      tech: ["Computer Vision", "Dataset Engineering", "Materials Science"], 
+      img: "https://images.unsplash.com/photo-1532187863486-abf9d3a44618?auto=format&fit=crop&q=80&w=400" 
     }
   ];
 

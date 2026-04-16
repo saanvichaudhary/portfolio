@@ -39,13 +39,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <section 
+    <section
       ref={containerRef}
-      style={{ 
-        height: '100vh', 
+      style={{
+        height: '100vh',
         position: 'relative',
-        display: 'flex', 
-        alignItems: 'center', 
+        display: 'flex',
+        alignItems: 'center',
         justifyContent: 'center', // Centers everything for that cinematic aesthetic
         overflow: 'hidden',
         backgroundColor: 'var(--bg-main)'
@@ -70,7 +70,7 @@ const Hero = () => {
             }}
           />
         </AnimatePresence>
-        
+
         {/* Cinematic Dark/Gradient Overlay */}
         <div style={{
           position: 'absolute',
@@ -82,24 +82,24 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%' }}>
-        <motion.div 
+        <motion.div
           style={{ y: textY, opacity, textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}
         >
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            style={{ 
-              fontSize: 'clamp(4rem, 10vw, 8.5rem)', 
-              fontWeight: 600, 
-              letterSpacing: '-0.04em', 
-              lineHeight: 1, 
-              marginBottom: '2rem', 
+            style={{
+              fontSize: 'clamp(4rem, 10vw, 8.5rem)',
+              fontWeight: 600,
+              letterSpacing: '-0.04em',
+              lineHeight: 1,
+              marginBottom: '2rem',
               color: '#d6d3d1', // Light beige for high contrast against dark overlay
               textShadow: '0 4px 12px rgba(0,0,0,0.5)'
             }}
           >
-            Saanvi<br/>Chaudhary
+            Saanvi<br />Chaudhary
           </motion.h1>
 
           <motion.div
@@ -112,14 +112,14 @@ const Hero = () => {
               Electronics & Biomedical Engineer
             </h2>
             <h3 style={{ fontSize: '1.25rem', fontWeight: 300, color: 'var(--accent)', letterSpacing: '0.05em' }}>
-              Machine Learning Engineer
+              AI & Machine Learning
             </h3>
           </motion.div>
         </motion.div>
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
@@ -136,10 +136,10 @@ const Hero = () => {
         }}
       >
         <span style={{ fontSize: '0.75rem', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--accent)' }}>Scroll</span>
-        <motion.div 
+        <motion.div
           style={{ width: '1px', height: '40px', backgroundColor: 'rgba(255,255,255,0.2)', overflow: 'hidden', position: 'relative' }}
         >
-          <motion.div 
+          <motion.div
             animate={{ y: ['-100%', '100%'] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
             style={{ width: '100%', height: '50%', backgroundColor: 'var(--accent)' }}

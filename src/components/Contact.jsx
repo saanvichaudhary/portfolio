@@ -5,15 +5,36 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate backend submission logic
-    setTimeout(() => {
-      setIsSubmitting(false);
+    
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+      _subject: "New Message from Portfolio Website!"
+    };
+
+    try {
+      await fetch("https://formsubmit.co/ajax/saanvichaudhary46@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      
       setIsSuccess(true);
+      e.target.reset();
       setTimeout(() => setIsSuccess(false), 4000);
-    }, 1500);
+    } catch (error) {
+      console.error("Submission failed:", error);
+      alert("Something went wrong, please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -60,7 +81,7 @@ const Contact = () => {
           
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'left' }}>
             <div>
-              <input type="text" placeholder="Name" required
+              <input type="text" name="name" placeholder="Name" required
                 style={{ 
                   width: '100%', 
                   padding: '1rem', 
@@ -77,7 +98,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <input type="email" placeholder="Email" required
+              <input type="email" name="email" placeholder="Email" required
                 style={{ 
                   width: '100%', 
                   padding: '1rem', 
@@ -94,7 +115,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <textarea rows="4" placeholder="Message" required
+              <textarea name="message" rows="4" placeholder="Message" required
                 style={{ 
                   width: '100%', 
                   padding: '1rem', 
