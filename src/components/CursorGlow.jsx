@@ -3,17 +3,32 @@ import { motion } from 'framer-motion';
 
 const CursorGlow = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const updateMousePosition = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
+    const checkVisibility = () => {
+      const isTouch = window.matchMedia('(pointer: coarse)').matches;
+      const isMobileWidth = window.innerWidth <= 768;
+      setIsVisible(!isTouch && !isMobileWidth);
+    };
+
+    // Initial check
+    checkVisibility();
+
     window.addEventListener('mousemove', updateMousePosition);
+    window.addEventListener('resize', checkVisibility);
+
     return () => {
       window.removeEventListener('mousemove', updateMousePosition);
+      window.removeEventListener('resize', checkVisibility);
     };
   }, []);
+
+  if (!isVisible) return null;
 
   return (
     <>
@@ -34,7 +49,7 @@ const CursorGlow = () => {
           opacity: 0.08,
           filter: 'blur(40px)',
           pointerEvents: 'none',
-          zIndex: 9998, // just under grain
+          zIndex: 99999, // higher than header (20000)
         }}
       />
       <motion.div
@@ -52,7 +67,7 @@ const CursorGlow = () => {
           borderRadius: '50%',
           backgroundColor: 'var(--primary)',
           pointerEvents: 'none',
-          zIndex: 9998,
+          zIndex: 99999,
         }}
       />
     </>

@@ -8,7 +8,7 @@ const Projects = () => {
     {
       id: 1,
       title: "Perceiver based model for hyperspectral image Super-Resolution",
-      desc: "First to use Perceiver model for this purpose and modified its decoder for hyperspectral image reconstruction, validated on Chikusei & Pavia datasets using PSNR, SSIM, and SAM metrics. (PSNR-39.1 db, SAM-0.028).",
+      desc: "First to use Perceiver model for this purpose and modified its decoder for hyperspectral image reconstruction, validated on Chikusei & Pavia datasets using PSNR, SSIM, and SAM metrics. (PSNR-39.1 db, SAM-0.028 radians).",
       tech: ["Deep Learning", "Hyperspectral Imaging", "Perceiver"],
       img: "https://www.flysight.it/wp-content/uploads/2023/08/fs_imaging_230804-2-1.jpg"
     },

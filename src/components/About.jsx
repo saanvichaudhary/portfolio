@@ -221,12 +221,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import campus from '../assets/campus vit.jpg';
-import hero from '../assets/hero.png';
-import hydrogel from '../assets/Hydrogel TENG Project.jpg';
-import lab from '../assets/lab work.jpg';
-import profile from '../assets/profile.png';
-import sensor from '../assets/sensor system setup.jpg';
 import pfp1 from '../assets/pfp2.jpeg';
 import me from '../assets/me1.jpg';
 import engg from '../assets/engg_day.png';
@@ -327,11 +321,8 @@ const About = () => {
 
   const images = [
     { src: me, caption: 'SocPros2025' },
-    { src: hydrogel, caption: 'Hydrogel TENG Project' },
     { src: socpros, caption: 'SocPros2025' },
-    { src: campus, caption: 'Campus' },
-    { src: pfp1, caption: 'ICNAN D-1' },
-    { src: sensor, caption: 'Sensor System Setup' },
+    { src: pfp1, caption: 'ICNAN 2025' },
     { src: iot1, caption: 'Best IoT Project of the Year Award' },
     { src: icnan1, caption: 'ICNAN 2025' },
     { src: engg, caption: 'Engineers Day' },

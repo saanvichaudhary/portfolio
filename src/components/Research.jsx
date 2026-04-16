@@ -8,16 +8,16 @@ const Research = () => {
       date: "Feb 2025",
       title: "A Machine Learning Model for Pulmonary Medication Recommendation Based on Patient Data",
       desc: "Presented at SocProS 2025 (IIT Roorkee); explores ML-driven decision support for pulmonary healthcare.",
-      link: "#",
-      btnText: "View Paper"
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7306705320175644673/?originTrackingId=5WHgVxQClnoJOecttmIlJQ%3D%3D",
+      btnText: "View Post"
     },
     {
       type: "Publication",
       date: "2025",
       title: "Transformation of Carbon-Based Waste into Renewable Energy through a Triboelectric Nanogenerator",
       desc: "Presented at International Conference on Nanoscience and Nanotechnology, VIT Vellore.",
-      link: "#",
-      btnText: "View Paper"
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7408457936303403008/?originTrackingId=zyOwTd2vqh0Lp6hQ5fnOpQ%3D%3D",
+      btnText: "View Post"
     }
   ];
 

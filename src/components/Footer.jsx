@@ -24,7 +24,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer style={{
-      padding: '4rem 0 2rem 0',
+      padding: '2rem 0 2rem 0',
       borderTop: '1px solid var(--border-light)',
       textAlign: 'center',
       backgroundColor: 'var(--bg-secondary)',
@@ -33,7 +33,7 @@ const Footer = () => {
       <div className="container">
 
         {/* Outro Line */}
-        <p style={{
+        {/* <p style={{
           fontSize: '1rem',
           fontStyle: 'italic',
           lineHeight: 1.6,
@@ -43,21 +43,21 @@ const Footer = () => {
         }}>
           I know you desperate for a change, let the pen glide <br />
           But the only real change come from inside
-        </p>
+        </p> */}
 
-        <p style={{
+        {/* <p style={{
           marginTop: '0.5rem',
           fontSize: '0.8rem',
           opacity: 0.6
         }}>
           — J. Cole
-        </p>
+        </p> */}
 
         {/* Footer Info */}
-        <div style={{ marginTop: '2rem', fontSize: '0.85rem' }}>
-          <p>© {new Date().getFullYear()} Saanvi Chaudhary. All rights reserved.</p>
+        <div style={{ marginTop: '0.1rem', fontSize: '0.85rem' }}>
+          <p>© {new Date().getFullYear()} Saanvi Chaudhary<br></br>All rights reserved.</p>
           <p style={{ marginTop: '0.4rem', fontSize: '0.75rem' }}>
-            Designed with Figma & built with React.
+            Designed with Figma & built with React and Node.
           </p>
         </div>
 
