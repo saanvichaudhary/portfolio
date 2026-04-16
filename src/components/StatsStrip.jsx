@@ -17,6 +17,7 @@ const StatsStrip = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="stats-container"
           style={{
             display: 'flex',
             justifyContent: 'center',
@@ -41,7 +42,7 @@ const StatsStrip = () => {
                 {stat}
               </span>
               {idx !== stats.length - 1 && (
-                <span style={{
+                <span className="stats-dot" style={{
                   color: 'var(--accent)',
                   opacity: 0.5,
                   display: 'inline-block',

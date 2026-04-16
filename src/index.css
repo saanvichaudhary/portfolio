@@ -111,12 +111,33 @@ a, button {
   #skills h3 {
     text-align: center;
   }
+
+  /* Research subcategory alignment */
+  #research h4, #research h3 {
+    text-align: center;
+  }
   
   /* Research grid snapping -> 1 column & center */
-  #research .container > div:last-child > div {
+  .research-item {
     grid-template-columns: 1fr !important;
     text-align: center;
-    gap: 1rem !important;
+    gap: 1.5rem !important;
+  }
+  .research-item > div:first-child span {
+    display: block !important;
+    margin: 0.3rem auto !important;
+  }
+  .research-item h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Stats Strip mobile vertical stacking */
+  .stats-container {
+    flex-direction: column !important;
+    gap: 1.2rem;
+  }
+  .stats-dot {
+    display: none !important;
   }
   
   /* Auto-centering paragraphs under headers globally */
@@ -132,10 +153,9 @@ a, button {
     text-align: center;
   }
 
-  /* Force tech stacks in Projects/Research to center row */
+  /* Force tech stacks in Projects to center row */
   #projects .glass > div > div:last-child,
-  #skills .container > div > div > div > div,
-  #research .container > div > div > div > div {
+  #skills .container > div > div > div > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center !important;

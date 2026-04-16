@@ -58,6 +58,7 @@ const Research = () => {
   const renderItem = (entry, idx) => (
     <motion.div
       key={`${entry.title}-${idx}`}
+      className="research-item"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -177,14 +178,6 @@ const Research = () => {
 
         </div>
       </div>
-      <style>{`
-        @media (max-width: 768px) {
-          #research > .container > div > div > div {
-            grid-template-columns: 1fr !important;
-            gap: 1rem !important;
-          }
-        }
-      `}</style>
     </section>
   );
 };
