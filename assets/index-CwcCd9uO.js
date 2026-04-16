@@ -50,9 +50,7 @@ Error generating stack: `+e.message+`
           #about .container > div:last-child {
             width: 100%;
             max-width: 320px;
-            height: auto;
-            aspect-ratio: 2 / 3;
-            max-height: none;
+            height: 480px !important;
             margin: 2rem auto 0 auto;
           }
         }
