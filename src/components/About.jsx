@@ -233,6 +233,7 @@ import engg from '../assets/engg_day.png';
 import icnan1 from '../assets/icnan1.jpg';
 import iot1 from '../assets/iot award.jpg';
 import iot2 from '../assets/iot award2.jpg';
+import socpros from '../assets/socpros.jpeg';
 
 
 /* ── Fading crossfade gallery ── */
@@ -327,6 +328,7 @@ const About = () => {
   const images = [
     { src: me, caption: 'SocPros2025' },
     { src: hydrogel, caption: 'Hydrogel TENG Project' },
+    { src: socpros, caption: 'SocPros2025' },
     { src: campus, caption: 'Campus' },
     { src: pfp1, caption: 'ICNAN D-1' },
     { src: sensor, caption: 'Sensor System Setup' },
