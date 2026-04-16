@@ -505,8 +505,11 @@ const About = () => {
           }
           #about .container > div:last-child {
             width: 100%;
-            max-height: 300px;
-            margin-top: 2rem;
+            max-width: 320px;
+            height: auto;
+            aspect-ratio: 2 / 3;
+            max-height: none;
+            margin: 2rem auto 0 auto;
           }
         }
       `}</style>
