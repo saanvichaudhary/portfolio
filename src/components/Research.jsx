@@ -25,7 +25,7 @@ const Research = () => {
     {
       type: "Achievement",
       date: "2025",
-      title: "Best IoT Project – Engineers’ Day, VIT Vellore",
+      title: "Best IoT Project of the year – Engineers’ Day, VIT Vellore",
       desc: "Recognized for innovative IoT system under 'Deep Tech & Engineering Excellence'."
     },
     {

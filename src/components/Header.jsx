@@ -25,7 +25,7 @@ const Header = () => {
       if (window.scrollY < 100) {
         current = '';
       }
-      
+
       // If we are close to bottom, highlight contact
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
         current = 'contact';
@@ -41,11 +41,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { id: 'about', label: 'About' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'research', label: 'Publications & Research' },
-    { id: 'skills', label: 'Skills & Expertise' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'about', label: 'About', mobileLabel: 'About' },
+    { id: 'projects', label: 'Projects', mobileLabel: 'Projects' },
+    { id: 'research', label: 'Publications & Research', mobileLabel: 'Research' },
+    { id: 'skills', label: 'Skills & Expertise', mobileLabel: 'Skills' },
+    { id: 'contact', label: 'Contact', mobileLabel: 'Contact' }
   ];
 
   return (
@@ -87,7 +87,8 @@ const Header = () => {
                   transition: 'all 0.3s ease'
                 }}
               >
-                {link.label}
+                <span className="desktop-text">{link.label}</span>
+                <span className="mobile-text" style={{ display: 'none' }}>{link.mobileLabel}</span>
               </a>
             );
           })}
@@ -96,21 +97,30 @@ const Header = () => {
 
       <style>{`
         @media (max-width: 768px) {
+          header {
+            padding: 1rem 0 !important;
+          }
           .header-container {
             flex-direction: column;
-            gap: 1rem;
+            gap: 0.5rem;
           }
           .header-nav {
-            gap: 1rem !important;
+            gap: 0.5rem !important;
             flex-wrap: wrap;
             justify-content: center;
           }
           .header-nav a {
-            font-size: 0.85rem !important;
+            font-size: 0.8rem !important;
           }
           .nav-btn {
-            font-size: 0.8rem !important;
-            padding: 0.4rem 0.8rem !important;
+            font-size: 0.75rem !important;
+            padding: 0.3rem 0.6rem !important;
+          }
+          .desktop-text {
+            display: none !important;
+          }
+          .mobile-text {
+            display: inline !important;
           }
         }
       `}</style>
