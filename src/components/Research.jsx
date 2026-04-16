@@ -127,10 +127,7 @@ const Research = () => {
   );
 
   return (
-    <section id="research" style={{
-      padding: '10rem 0',
-      position: 'relative'
-    }}>
+    <section id="research" style={{ padding: '8rem 0' }}>
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

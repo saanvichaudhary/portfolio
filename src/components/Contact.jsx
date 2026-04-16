@@ -8,38 +8,32 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
-      _subject: "New Message from Portfolio Website!"
-    };
+
+    const formData = new FormData(e.target);
 
     try {
       await fetch("https://formsubmit.co/ajax/saanvichaudhary46@gmail.com", {
         method: "POST",
-        headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+        headers: {
+            'Accept': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: formData
       });
-      
+
       setIsSuccess(true);
       e.target.reset();
       setTimeout(() => setIsSuccess(false), 4000);
     } catch (error) {
-      console.error("Submission failed:", error);
-      alert("Something went wrong, please try again.");
+      console.error(error);
+      alert("Something went wrong! Please try again.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <section id="contact" style={{ 
-      padding: '10rem 0', 
+    <section id="contact" style={{
+      padding: '10rem 0',
       position: 'relative',
       overflow: 'hidden'
     }}>
@@ -66,10 +60,10 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
           className="glass"
-          style={{ 
-            width: '100%', 
-            maxWidth: '600px', 
-            padding: '4rem', 
+          style={{
+            width: '100%',
+            maxWidth: '600px',
+            padding: '4rem',
             borderRadius: '24px',
             textAlign: 'center'
           }}
@@ -78,48 +72,53 @@ const Contact = () => {
           <p style={{ color: 'var(--text-main)', opacity: 0.8, marginBottom: '3rem', fontWeight: 300, fontSize: '1.1rem' }}>
             Interested in collaboration or just want to say hi? Drop a message.
           </p>
-          
+
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'left' }}>
+            
+            {/* Formsubmit Configuration */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
             <div>
               <input type="text" name="name" placeholder="Name" required
-                style={{ 
-                  width: '100%', 
-                  padding: '1rem', 
-                  borderRadius: '12px', 
+                style={{
+                  width: '100%',
+                  padding: '1rem',
+                  borderRadius: '12px',
                   border: '1px solid var(--border-light)',
                   backgroundColor: 'rgba(255, 255, 255, 0.4)',
                   color: 'var(--text-main)',
                   fontFamily: 'inherit',
                   outline: 'none',
                   transition: 'var(--transition)'
-                }} 
+                }}
                 onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px var(--accent)'}
                 onBlur={(e) => e.target.style.boxShadow = 'none'}
               />
             </div>
             <div>
               <input type="email" name="email" placeholder="Email" required
-                style={{ 
-                  width: '100%', 
-                  padding: '1rem', 
-                  borderRadius: '12px', 
+                style={{
+                  width: '100%',
+                  padding: '1rem',
+                  borderRadius: '12px',
                   border: '1px solid var(--border-light)',
                   backgroundColor: 'rgba(255, 255, 255, 0.4)',
                   color: 'var(--text-main)',
                   fontFamily: 'inherit',
                   outline: 'none',
                   transition: 'var(--transition)'
-                }} 
+                }}
                 onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px var(--accent)'}
                 onBlur={(e) => e.target.style.boxShadow = 'none'}
               />
             </div>
             <div>
               <textarea name="message" rows="4" placeholder="Message" required
-                style={{ 
-                  width: '100%', 
-                  padding: '1rem', 
-                  borderRadius: '12px', 
+                style={{
+                  width: '100%',
+                  padding: '1rem',
+                  borderRadius: '12px',
                   border: '1px solid var(--border-light)',
                   backgroundColor: 'rgba(255, 255, 255, 0.4)',
                   color: 'var(--text-main)',
@@ -127,13 +126,13 @@ const Contact = () => {
                   outline: 'none',
                   resize: 'vertical',
                   transition: 'var(--transition)'
-                }} 
+                }}
                 onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px var(--accent)'}
                 onBlur={(e) => e.target.style.boxShadow = 'none'}
               />
             </div>
 
-            <motion.button 
+            <motion.button
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

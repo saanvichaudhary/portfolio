@@ -228,6 +228,12 @@ import lab from '../assets/lab work.jpg';
 import profile from '../assets/profile.png';
 import sensor from '../assets/sensor system setup.jpg';
 import pfp1 from '../assets/pfp2.jpeg';
+import me from '../assets/me1.jpg';
+import engg from '../assets/engg_day.png';
+import icnan1 from '../assets/icnan1.jpg';
+import iot1 from '../assets/iot award.jpg';
+import iot2 from '../assets/iot award2.jpg';
+
 
 /* ── Fading crossfade gallery ── */
 const FadingGallery = ({ images }) => {
@@ -319,11 +325,15 @@ const About = () => {
   const containerRef = useRef(null);
 
   const images = [
+    { src: me, caption: 'SocPros2025' },
     { src: hydrogel, caption: 'Hydrogel TENG Project' },
+    { src: campus, caption: 'Campus' },
+    { src: pfp1, caption: 'ICNAN D-1' },
     { src: sensor, caption: 'Sensor System Setup' },
-    { src: lab, caption: 'Lab Work' },
-    { src: campus, caption: 'Campus – VIT Vellore' },
-    { src: pfp1, caption: 'Saanvi Chaudhary' },
+    { src: iot1, caption: 'Best IoT Project of the Year Award' },
+    { src: icnan1, caption: 'ICNAN 2025' },
+    { src: engg, caption: 'Engineers Day' },
+    { src: iot2, caption: 'SENSE Department' },
   ];
 
   return (
@@ -345,6 +355,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="about-left-col"
           style={{ flex: '1 1 420px', zIndex: 10 }}
         >
           <motion.h2
@@ -406,6 +417,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.8 }}
+            className="about-skills-wrapper"
             style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}
           >
             {[
@@ -482,9 +494,19 @@ const About = () => {
           #about .container {
             flex-direction: column;
           }
+          .about-left-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+          .about-skills-wrapper {
+            align-items: center;
+          }
           #about .container > div:last-child {
             width: 100%;
             max-height: 300px;
+            margin-top: 2rem;
           }
         }
       `}</style>

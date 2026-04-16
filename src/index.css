@@ -92,3 +92,52 @@ a, button {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary); 
 }
+
+/* --- GLOBAL MOBILE ALIGNMENT --- */
+@media (max-width: 768px) {
+  /* Center standard headers across sections */
+  #projects .container > div:first-child,
+  #research .container > div:first-child,
+  #skills .container > div:first-child,
+  #writing .container > div:first-child,
+  #contact .container > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Skills category text alignment */
+  #skills h3 {
+    text-align: center;
+  }
+  
+  /* Research grid snapping -> 1 column & center */
+  #research .container > div:last-child > div {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 1rem !important;
+  }
+  
+  /* Auto-centering paragraphs under headers globally */
+  p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Automatically flex-align any tags/pills to center */
+  span.tag, span[style*="border-radius"], div[style*="display: flex; gap: 0.5rem"] {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Force tech stacks in Projects/Research to center row */
+  #projects .glass > div > div:last-child,
+  #skills .container > div > div > div > div,
+  #research .container > div > div > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+}
